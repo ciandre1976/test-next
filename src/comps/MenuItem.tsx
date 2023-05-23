@@ -1,7 +1,16 @@
 import React from "react";
 import Link from "next/link";
+import { type } from "os";
 
-export default function MenuItem({ title, address, Icon }) {
+type Menu = {
+  props: {
+    title: string;
+    address: string;
+    Icon: any;
+  };
+};
+
+export default function MenuItem({ title, address, Icon }: Menu) {
   return (
     <>
       <Link href={address} className="m-4 lg:mx-6 hover:text-amber-600">
