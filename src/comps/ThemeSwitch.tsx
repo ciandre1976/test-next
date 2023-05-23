@@ -11,9 +11,15 @@ export default function ThemeSwitch() {
   return (
     <>
       {currentTheme === "dark" ? (
-        <MdLightMode onClick={() => setTheme("light")} />
+        <MdLightMode
+          className="text-xl cursor-pointer hover:text-amber-500"
+          onClick={() => setTheme("light")}
+        />
       ) : (
-        <BsFillMoonFill onClick={() => setTheme("dark")} />
+        <BsFillMoonFill
+          className="text-xl cursor-pointer hover:text-amber-500"
+          onClick={() => setTheme("dark")}
+        />
       )}
     </>
   );
